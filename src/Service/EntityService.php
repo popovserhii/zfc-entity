@@ -1,10 +1,10 @@
 <?php
 namespace Popov\ZfcEntity\Service;
 
-use Popov\ZfcEntity\Model\Entity as Module;
+use Popov\ZfcEntity\Model\Entity;
 use Popov\ZfcCore\Service\DomainServiceAbstract;
 
 class EntityService extends DomainServiceAbstract
 {
-    protected $entity = Module::class;
+    protected $entity = Entity::class;
 }

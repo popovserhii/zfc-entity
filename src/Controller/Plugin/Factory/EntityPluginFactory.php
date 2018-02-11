@@ -11,7 +11,7 @@
 namespace Popov\ZfcEntity\Controller\Plugin\Factory;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
-use Popov\ZfcEntity\Controller\Plugin\EntityPlugin;
+use Popov\ZfcEntity\Controller\Plugin\EntityHelper;
 
 class EntityPluginFactory {
 
@@ -30,7 +30,7 @@ class EntityPluginFactory {
 		//$changer = $sm->get('StatusChanger');
 		$entityService = $sm->get('EntityService');
 
-		$entityPlugin = new EntityPlugin($entityService/*, $current*/);
+		$entityPlugin = new EntityHelper($entityService/*, $current*/);
             //->injectCurrentPlugin($current)
         $entityPlugin->setObjectManager($om);
         $entityPlugin->setServiceManager($sm);

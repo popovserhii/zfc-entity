@@ -21,15 +21,7 @@ class ModuleFactory {
 
 		//$om = $sm->get('Doctrine\ORM\EntityManager');
 		$cpm = $sm->get('ControllerPluginManager');
-		//$vhm = $sm->get('ViewHelperManager');
 
-		//$config = $sm->get('Config');
-		//$current = $cpm->get('current');
-		//$formElement = $vhm->get('formElement');
-		//$translator = $vhm->get('translate');
-
-		//$changer = $sm->get('StatusChanger');
-		//$moduleService = $sm->get('EntityService');
 
 		$modulePlugin = $cpm->get('module');
 

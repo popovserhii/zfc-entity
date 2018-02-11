@@ -12,10 +12,10 @@ namespace Popov\ZfcEntity\Controller\Plugin\Factory;
 
 use Zend\ServiceManager\ServiceLocatorInterface;
 use Zend\Mvc\Controller\PluginManager;
-use Popov\ZfcEntity\Controller\Plugin\ModulePlugin;
+use Popov\ZfcEntity\Controller\Plugin\ModuleHelper;
 use Popov\ZfcEntity\Service\ModuleService;
 
-class ModulePluginFactory {
+class ModuleHelperFactory {
 
 	public function __invoke(ServiceLocatorInterface $cpm) {
 		/** @var PluginManager $cpm */
@@ -36,7 +36,7 @@ class ModulePluginFactory {
         /** @var ModuleService $moduleService */
 		$moduleService = $sm->get('ModuleService');
 
-		return (new ModulePlugin($moduleService/*, $current*/))
+		return (new ModuleHelper($moduleService/*, $current*/))
 			->injectCurrentPlugin($current)
 			->injectEntityPlugin($entity)
 			->injectTranslator($translator)
