@@ -4,7 +4,7 @@
  *
  * @category Agere
  * @package Agere_Entity
- * @author Popov Sergiy <popov@agere.com.ua>
+ * @author Serhii Popov <popow.serhii@gmail.com>
  * @datetime: 21.07.2016 12:57
  */
 namespace Popov\ZfcEntity\Service;
