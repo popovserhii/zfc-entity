@@ -22,5 +22,11 @@
     "psr-4": {
       "Popov\\ZfcEntity\\": "src/"
     }
+  },
+  "extra": {
+    "zf": {
+      "component": "Popov\\ZfcEntity",
+      "config-provider": "Popov\\ZfcEntity\\ConfigProvider"
+    }
   }
 }
