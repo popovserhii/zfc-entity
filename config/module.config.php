@@ -15,6 +15,8 @@ return [
         ],
         'factories' => [
             Helper\EntityHelper::class => Helper\Factory\EntityHelperFactory::class,
+            Helper\ModuleHelper::class => Helper\Factory\ModuleHelperFactory::class,
+            //Helper\EntityServiceCreator::class => Helper\Factory\EntityServiceCreatorFactory::class,
         ],
     ],
 
@@ -22,7 +24,7 @@ return [
 	'controller_plugins' => [
 		'factories' => [
 			'entity' => Controller\Plugin\Factory\EntityPluginFactory::class,
-			'module' => Controller\Plugin\Factory\ModuleHelperFactory::class,
+			#'module' => Controller\Plugin\Factory\ModuleHelperFactory::class,
 		]
 	],
 

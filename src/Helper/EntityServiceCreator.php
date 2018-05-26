@@ -17,7 +17,7 @@ namespace Popov\ZfcEntity\Helper;
 
 use Psr\Container\ContainerInterface;
 
-class EntityServiceFactory
+class EntityServiceCreator
 {
     /**
      * @var ContainerInterface

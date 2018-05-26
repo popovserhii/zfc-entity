@@ -1,11 +1,11 @@
 {
   "name": "popov/zfc-entity",
-  "description": "ZF2 entity managment module",
+  "description": "ZF2 entity management module",
   "type": "zf-module",
   "license": "MIT",
   "keywords": [
     "zf2",
-    "entity managment"
+    "entity management"
   ],
   "authors": [
     {
@@ -14,7 +14,6 @@
       "role": "Developer"
     }
   ],
-  "minimum-stability": "dev",
   "require": {
     "php": ">=5.6"
   },

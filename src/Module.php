@@ -1,4 +1,5 @@
 <?php
+
 namespace Popov\ZfcEntity;
 
 class Module
