@@ -24,13 +24,13 @@ class EntityHelper
     /** @var EntityService */
     protected $entityService;
 
-    /** @var EntityServiceFactory */
+    /** @var EntityServiceCreator */
     protected $entityServiceFactory;
 
     /** @var string|object */
     protected $context;
 
-    public function __construct(/*EntityService $entityService, */EntityServiceFactory $entityServiceFactory)
+    public function __construct(/*EntityService $entityService, */EntityServiceCreator $entityServiceFactory)
     {
         //$this->entityService = $entityService;
         $this->entityServiceFactory = $entityServiceFactory;

@@ -15,8 +15,7 @@
 
 namespace Popov\ZfcEntity\Helper\Factory;
 
-use Popov\ZfcEntity\Helper\EntityServiceFactory;
-use Popov\ZfcEntity\Service\EntityService;
+use Popov\ZfcEntity\Helper\EntityServiceCreator;
 use Psr\Container\ContainerInterface;
 use Popov\ZfcEntity\Helper\EntityHelper;
 
@@ -24,7 +23,7 @@ class EntityHelperFactory
 {
     public function __invoke(ContainerInterface $container)
     {
-        $entityServiceFactory = new EntityServiceFactory($container);
+        $entityServiceFactory = new EntityServiceCreator($container);
         $om = $container->get('Doctrine\ORM\EntityManager');
         //$entityService = $container->get(EntityService::class);
         $entityHelper = new EntityHelper(/*$entityService,*/ $entityServiceFactory);
