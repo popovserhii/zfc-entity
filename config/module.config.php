@@ -1,7 +1,37 @@
 <?php
 namespace Popov\ZfcEntity;
 
+use Zend\ServiceManager\AbstractFactory\ReflectionBasedAbstractFactory;
+
 return [
+    'console' => [
+        'router' => [
+            'routes' => [
+                'entity-routes' => [
+                    'type' => 'simple',
+                    'options' => [
+                        'route' => 'entity <action> [--type=]',
+                        'defaults' => [
+                            'controller' => 'entity-console',
+                            'action' => 'index',
+                        ],
+                    ],
+                ],
+            ],
+        ],
+    ],
+
+
+    'controllers' => [
+        'aliases' => [
+            'entity-console' => Controller\EntityConsoleController::class,
+        ],
+        'factories' => [
+            Controller\EntityConsoleController::class => ReflectionBasedAbstractFactory::class
+        ]
+    ],
+
+
     'dependencies' => [
         'aliases' => [
             'Entity' => Model\Entity::class,
@@ -10,10 +40,11 @@ return [
             'ModuleService' => Service\ModuleService::class,
         ],
         'invokables' => [
-            Service\EntityService::class => Service\EntityService::class,
             Service\ModuleService::class => Service\ModuleService::class,
         ],
         'factories' => [
+            Service\EntityService::class => ReflectionBasedAbstractFactory::class,
+
             Helper\EntityHelper::class => Helper\Factory\EntityHelperFactory::class,
             Helper\ModuleHelper::class => Helper\Factory\ModuleHelperFactory::class,
             //Helper\EntityServiceCreator::class => Helper\Factory\EntityServiceCreatorFactory::class,
