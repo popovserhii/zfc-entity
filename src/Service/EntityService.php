@@ -18,7 +18,7 @@ class EntityService extends DomainServiceAbstract
         $this->simplerHelper = $simplerHelper;
     }
 
-    public function getData()
+    public function syncData()
     {
         $om = $this->getObjectManager();
         $namespaces = array();

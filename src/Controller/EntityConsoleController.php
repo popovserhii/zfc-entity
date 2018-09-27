@@ -37,6 +37,6 @@ class EntityConsoleController extends AbstractConsoleController
 
     public function syncAction()
     {
-        $this->entityService->getData();
+        $this->entityService->syncData();
     }
 }
