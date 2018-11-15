@@ -13,6 +13,9 @@ class Entity
 {
     use DomainAwareTrait;
 
+    const MNEMO = 'entity';
+    const TABLE = 'entity';
+
     /**
      * @var integer
      * @ORM\Column(name="id", type="integer", nullable=false, options={"unsigned":true})
