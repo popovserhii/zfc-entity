@@ -2,6 +2,8 @@
 
 namespace Popov\ZfcEntity;
 
+use Zend\Console\Console;
+
 class Module
 {
     public function getConfig()
@@ -14,13 +16,13 @@ class Module
         return $config;
     }
 
-    public function getConsoleUsage(Console $console) {
+    public function getConsoleUsage($console) {
         return [
             'Usage:',
             'entity [<command>]' => '',
 
             'Command:',
-            ['sync', 		                    'Run synk process for module and entity database tables.']
+            ['sync', 		                    'Run sync process for module and entity database tables.']
         ];
     }
 }
