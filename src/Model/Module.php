@@ -24,13 +24,13 @@ class Module
 
     /**
      * @var string
-     * @ORM\Column(name="name", type="string", unique=true, length=255, nullable=false)
+     * @ORM\Column(name="name", type="string", unique=true, length=191, nullable=false)
      */
     private $name;
 
     /**
      * @var string
-     * @ORM\Column(name="mnemo", type="string", unique=true, length=255, nullable=false)
+     * @ORM\Column(name="mnemo", type="string", unique=true, length=191, nullable=false)
      */
     private $mnemo;
 
