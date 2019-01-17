@@ -24,7 +24,7 @@
   },
   "extra": {
     "zf": {
-      "component": "Popov\\ZfcEntity",
+      "gridComponent": "Popov\\ZfcEntity",
       "config-provider": "Popov\\ZfcEntity\\ConfigProvider"
     }
   }
