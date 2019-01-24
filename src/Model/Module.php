@@ -65,18 +65,18 @@ class Module
     }
 
     /**
-     * @return int
+     * @return string
      */
-    public function getName()
+    public function getName(): string
     {
         return $this->name;
     }
 
     /**
-     * @param int $name
+     * @param string $name
      * @return self
      */
-    public function setName($name)
+    public function setName(string $name): self
     {
         $this->name = $name;
 
