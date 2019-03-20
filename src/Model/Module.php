@@ -12,6 +12,10 @@ use Popov\ZfcCore\Model\DomainAwareTrait;
  */
 class Module
 {
+    const MNEMO = 'module';
+
+    const TABLE = 'module';
+
     use DomainAwareTrait;
 
     /**
