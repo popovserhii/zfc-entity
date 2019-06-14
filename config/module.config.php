@@ -68,6 +68,12 @@ return [
 		],
 	],
 
+    'graphql' => [
+        'queries' => [
+            'paths' => [__DIR__ . '/../src/GraphQL/Query'],
+        ],
+    ],
+
     'doctrine' => [
         'driver' => [
             __NAMESPACE__ . '_driver' => [
