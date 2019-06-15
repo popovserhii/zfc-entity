@@ -19,21 +19,27 @@ use GraphQL\Doctrine\Types;
 use GraphQL\Type\Definition\Type;
 use Popov\ZfcEntity\Model\Entity;
 
-class EntityQuery
+class EntitiesQuery
 {
     public function __invoke(Types $types)
     {
         return [
-            'entity' => [
-                'type' => $types->getOutput(Entity::class), // Use automated ObjectType for output
-                'description' => 'Returns product by id (in range of 1-6)',
+            'entities' => [
+                'type' => Type::listOf($types->getOutput(Entity::class)), // Use automated ObjectType for output
                 'args' => [
-                    'id' => Type::nonNull(Type::id()),
+                    [
+                        'name' => 'filter',
+                        'type' => $types->getFilter(Entity::class), // Use automated filtering options
+                    ],
+                    [
+                        'name' => 'sorting',
+                        'type' => $types->getSorting(Entity::class), // Use automated sorting options
+                    ],
                 ],
                 'resolve' => function ($root, $args) use ($types) {
                     $queryBuilder = $types->createFilteredQueryBuilder(Entity::class, $args['filter'] ?? [],
                         $args['sorting'] ?? []);
-                    $result = $queryBuilder->getQuery()->getArrayResult();
+                    $result = $queryBuilder->getQuery()->getResult();
 
                     return $result;
                 },
